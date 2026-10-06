@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Portfolio | Seu Nome</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+ <!-- ========== HEADER ========== -->
+ <header id="header">
+ <nav class="nav container">
+ <a href="#" class="nav__logo">
+ SeuNome<span class="logo-dot">.</span>
+ </a>
+ <ul class="nav__menu" id="nav-menu">
+ <li><a href="#sobre" class="nav__link">Sobre Mim</a></li>
+ <li><a href="#projetos" class="nav__link">Trabalhos</a></li>
+ <li><a href="#experiencia" class="nav__link">Trajetória</a></li>
+ <li><a href="#stack" class="nav__link">Habilidades</a></li>
+ <li><a href="#certificados" class="nav__link">Formacao</a></li>
+ <li><a href="#contato" class="nav__link nav__link--cta">Contato</a></li>
+ <li>
+ <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+ <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+ <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+ </button>
+ </li>
+ </ul>
+ <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu">
+ <span></span><span></span><span></span>
+ </button>
+ </nav>
+ </header>
+
+ <main>
+ <!-- ========== HERO ========== -->
+ <section id="hero" class="hero">
+ <div class="hero__particles" id="particles"></div>
+ <div class="container hero__container">
+ <div class="hero__content">
+ <p class="hero__greeting animate-fade-up">Ola, eu sou</p>
+ <h1 class="hero__name animate-fade-up delay-1">Seu Nome</h1>
+ <h2 class="hero__title animate-fade-up delay-2">
+ <span class="typed-text" id="typed-text"></span>
+ <span class="cursor">|</span>
+ </h2>
+ <p class="hero__description animate-fade-up delay-3">
+ Profissional dedicado com experiencia em entregar resultados
+ de excelencia, combinando criatividade, competencia e comprometimento.
+ </p>
+ <div class="hero__actions animate-fade-up delay-4">
+ <a href="#projetos" class="btn btn--primary">Ver Trabalhos</a>
+ <a href="#contato" class="btn btn--outline">Fale Comigo</a>
+ </div>
+ <div class="hero__social animate-fade-up delay-5">
+ <a href="#" class="social-link" aria-label="LinkedIn" target="_blank">
+ <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <a href="#" class="social-link" aria-label="Instagram" target="_blank">
+ <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+ </a>
+ </div>
+ </div>
+ <div class="hero__image animate-fade-up delay-3">
+ <div class="hero__avatar">
+ <div class="avatar-ring"></div>
+ <!-- Substitua pelo caminho da sua foto -->
+ <img src="assets/images/profile/foto.png" alt="Foto de perfil" onerror="this.style.display='none'">
+ <div class="avatar-placeholder">
+ <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <a href="#sobre" class="hero__scroll" aria-label="Rolar para baixo">
+ <div class="mouse">
+ <div class="mouse__wheel"></div>
+ </div>
+ </a>
+ </section>
+
+ <!-- ========== SOBRE MIM ========== -->
+ <section id="sobre" class="section sobre">
+ <div class="container">
+ <h2 class="section__title reveal">
+ Sobre <span class="highlight">Mim</span>
+ </h2>
+ <div class="sobre__grid">
+ <div class="sobre__image reveal reveal--left">
+ <div class="image-card">
+ <!-- Substitua pela sua foto -->
+ <img src="assets/images/profile/foto-sobre.png" alt="Foto sobre mim" onerror="this.parentElement.innerHTML='<div class=image-placeholder><svg xmlns=http://www.w3.org/2000/svg width=60 height=60 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=1><path d=M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2/><circle cx=12 cy=7 r=4/></svg></div>'">
+ </div>
+ <div class="image-card__decoration"></div>
+ </div>
+ <div class="sobre__content reveal reveal--right">
+ <h3 class="sobre__subtitle">Profissional Multidisciplinar</h3>
+ <p class="sobre__text">
+ Sou um profissional dedicado a entregar resultados de excelencia,
+ combinando criatividade, competencia e comprometimento em cada
+ projeto que assumo. Valorizo o trabalho bem feito e busco sempre
+ superar as expectativas.
+ </p>
+ <p class="sobre__text">
+ Acredito que o crescimento profissional vem da melhoria continua.
+ Estou em constante aprendizado, aprimorando minhas habilidades
+ e ampliando meu repertorio para oferecer solucoes cada vez mais
+ completas e eficientes.
+ </p>
+ <div class="sobre__stats">
+ <div class="stat">
+ <span class="stat__number" data-count="5">0</span>
+ <span class="stat__suffix">+</span>
+ <span class="stat__label">Anos de Experiencia</span>
+ </div>
+ <div class="stat">
+ <span class="stat__number" data-count="30">0</span>
+ <span class="stat__suffix">+</span>
+ <span class="stat__label">Projetos Realizados</span>
+ </div>
+ <div class="stat">
+ <span class="stat__number" data-count="25">0</span>
+ <span class="stat__suffix">+</span>
+ <span class="stat__label">Clientes Satisfeitos</span>
+ </div>
+ </div>
+ <a href="assets/resume/curriculo.pdf" download class="btn btn--primary btn--download" id="btn-curriculo">
+ <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+ Baixar Curriculo
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== TRABALHOS ========== -->
+ <section id="projetos" class="section projetos">
+ <div class="container">
+ <h2 class="section__title reveal">
+ Principais <span class="highlight">Trabalhos</span>
+ </h2>
+ <p class="section__subtitle reveal">Uma selecao dos meus trabalhos mais recentes</p>
+
+ <!-- Filtros -->
+ <div class="projetos__filtros reveal">
+ <button class="filtro-btn active" data-filter="todos">Todos</button>
+ <button class="filtro-btn" data-filter="profissional">Profissional</button>
+ <button class="filtro-btn" data-filter="academico">Academico</button>
+ <button class="filtro-btn" data-filter="pessoal">Pessoal</button>
+ <button class="filtro-btn" data-filter="voluntario">Voluntario</button>
+ </div>
+
+ <div class="projetos__grid">
+ <!-- Trabalho 1 -->
+ <article class="projeto-card reveal" data-category="profissional">
+ <div class="projeto-card__image">
+ <!-- Substitua pela imagem do projeto -->
+ <img src="assets/images/projects/projeto-1.png" alt="Campanha Publicitaria" onerror="this.parentElement.innerHTML='<div class=project-placeholder><svg xmlns=http://www.w3.org/2000/svg width=48 height=48 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=1><rect x=3 y=3 width=18 height=18 rx=2 ry=2/><circle cx=8.5 cy=8.5 r=1.5/><polyline points=21 15 16 10 5 21/></svg></div>'">
+ <div class="projeto-card__overlay">
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Detalhes">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+ </a>
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Projeto">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+ </div>
+ <div class="projeto-card__content">
+ <h3 class="projeto-card__title">Campanha Publicitaria</h3>
+ <p class="projeto-card__description">Campanha estrategica de comunicacao com foco em alcance e engajamento do publico-alvo.</p>
+ <div class="projeto-card__tags">
+ <span class="tag">Marketing</span>
+ <span class="tag">Estrategia</span>
+ <span class="tag">Comunicacao</span>
+ </div>
+ </div>
+ </article>
+
+ <!-- Trabalho 2 -->
+ <article class="projeto-card reveal" data-category="academico">
+ <div class="projeto-card__image">
+ <img src="assets/images/projects/projeto-2.png" alt="Projeto de Pesquisa" onerror="this.parentElement.innerHTML='<div class=project-placeholder><svg xmlns=http://www.w3.org/2000/svg width=48 height=48 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=1><rect x=3 y=3 width=18 height=18 rx=2 ry=2/><circle cx=8.5 cy=8.5 r=1.5/><polyline points=21 15 16 10 5 21/></svg></div>'">
+ <div class="projeto-card__overlay">
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Detalhes">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+ </a>
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Projeto">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+ </div>
+ <div class="projeto-card__content">
+ <h3 class="projeto-card__title">Projeto de Pesquisa</h3>
+ <p class="projeto-card__description">Pesquisa aprofundada com metodologia rigorosa e resultados publicaveis.</p>
+ <div class="projeto-card__tags">
+ <span class="tag">Pesquisa</span>
+ <span class="tag">Analise</span>
+ <span class="tag">Metodologia</span>
+ </div>
+ </div>
+ </article>
+
+ <!-- Trabalho 3 -->
+ <article class="projeto-card reveal" data-category="profissional">
+ <div class="projeto-card__image">
+ <img src="assets/images/projects/projeto-3.png" alt="Consultoria Empresarial" onerror="this.parentElement.innerHTML='<div class=project-placeholder><svg xmlns=http://www.w3.org/2000/svg width=48 height=48 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=1><rect x=3 y=3 width=18 height=18 rx=2 ry=2/><circle cx=8.5 cy=8.5 r=1.5/><polyline points=21 15 16 10 5 21/></svg></div>'">
+ <div class="projeto-card__overlay">
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Detalhes">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+ </a>
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Projeto">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+ </div>
+ <div class="projeto-card__content">
+ <h3 class="projeto-card__title">Consultoria Empresarial</h3>
+ <p class="projeto-card__description">Diagnostico organizacional e plano de acao para melhoria de processos e resultados.</p>
+ <div class="projeto-card__tags">
+ <span class="tag">Gestao</span>
+ <span class="tag">Planejamento</span>
+ <span class="tag">Estrategia</span>
+ </div>
+ </div>
+ </article>
+
+ <!-- Trabalho 4 -->
+ <article class="projeto-card reveal" data-category="pessoal">
+ <div class="projeto-card__image">
+ <img src="assets/images/projects/projeto-4.png" alt="Identidade Visual" onerror="this.parentElement.innerHTML='<div class=project-placeholder><svg xmlns=http://www.w3.org/2000/svg width=48 height=48 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=1><rect x=3 y=3 width=18 height=18 rx=2 ry=2/><circle cx=8.5 cy=8.5 r=1.5/><polyline points=21 15 16 10 5 21/></svg></div>'">
+ <div class="projeto-card__overlay">
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Detalhes">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+ </a>
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Projeto">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+ </div>
+ <div class="projeto-card__content">
+ <h3 class="projeto-card__title">Identidade Visual</h3>
+ <p class="projeto-card__description">Desenvolvimento completo de identidade visual com manual de marca e aplicacoes.</p>
+ <div class="projeto-card__tags">
+ <span class="tag">Design</span>
+ <span class="tag">Comunicacao</span>
+ <span class="tag">Criatividade</span>
+ </div>
+ </div>
+ </article>
+
+ <!-- Trabalho 5 -->
+ <article class="projeto-card reveal" data-category="profissional">
+ <div class="projeto-card__image">
+ <img src="assets/images/projects/projeto-5.png" alt="Evento Corporativo" onerror="this.parentElement.innerHTML='<div class=project-placeholder><svg xmlns=http://www.w3.org/2000/svg width=48 height=48 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=1><rect x=3 y=3 width=18 height=18 rx=2 ry=2/><circle cx=8.5 cy=8.5 r=1.5/><polyline points=21 15 16 10 5 21/></svg></div>'">
+ <div class="projeto-card__overlay">
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Detalhes">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+ </a>
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Projeto">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+ </div>
+ <div class="projeto-card__content">
+ <h3 class="projeto-card__title">Evento Corporativo</h3>
+ <p class="projeto-card__description">Planejamento e execucao de evento corporativo com gestao completa de logistica e comunicacao.</p>
+ <div class="projeto-card__tags">
+ <span class="tag">Planejamento</span>
+ <span class="tag">Lideranca</span>
+ <span class="tag">Gestao</span>
+ </div>
+ </div>
+ </article>
+
+ <!-- Trabalho 6 -->
+ <article class="projeto-card reveal" data-category="voluntario">
+ <div class="projeto-card__image">
+ <img src="assets/images/projects/projeto-6.png" alt="Relatorio Anual" onerror="this.parentElement.innerHTML='<div class=project-placeholder><svg xmlns=http://www.w3.org/2000/svg width=48 height=48 viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=1><rect x=3 y=3 width=18 height=18 rx=2 ry=2/><circle cx=8.5 cy=8.5 r=1.5/><polyline points=21 15 16 10 5 21/></svg></div>'">
+ <div class="projeto-card__overlay">
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Detalhes">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+ </a>
+ <a href="#" class="projeto-card__link" target="_blank" aria-label="Ver Projeto">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+ </div>
+ <div class="projeto-card__content">
+ <h3 class="projeto-card__title">Relatorio Anual</h3>
+ <p class="projeto-card__description">Elaboracao de relatorio anual com indicadores de desempenho e analise estrategica.</p>
+ <div class="projeto-card__tags">
+ <span class="tag">Analise</span>
+ <span class="tag">Comunicacao</span>
+ <span class="tag">Estrategia</span>
+ </div>
+ </div>
+ </article>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== TRAJETÓRIA ========== -->
+ <section id="experiencia" class="section experiencia" aria-labelledby="experiencia-title">
+ <div class="container">
+ <h2 id="experiencia-title" class="section__title reveal">Minha <span class="highlight">Trajetória</span></h2>
+ <p class="section__subtitle reveal">Experiência profissional e formação acadêmica</p>
+ <!-- Exemplos: substitua datas, cargos, instituições e descrições pela sua trajetória. -->
+ <ol class="timeline">
+ <li class="timeline__item reveal reveal--left">
+ <div class="timeline__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+ <div class="timeline__card">
+ <div class="timeline__header"><span class="timeline__type">Trabalho</span><span class="timeline__date">2023 — Atual</span></div>
+ <h3 class="timeline__title">Seu cargo atual</h3>
+ <p class="timeline__org">Nome da Empresa</p>
+ <p class="timeline__desc">Descreva suas principais responsabilidades, os projetos em que atua e os resultados alcançados.</p>
+ <div class="timeline__tags"><span>Planejamento</span><span>Colaboração</span><span>Resultados</span></div>
+ </div>
+ </li>
+ <li class="timeline__item reveal reveal--right">
+ <div class="timeline__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+ <div class="timeline__card">
+ <div class="timeline__header"><span class="timeline__type">Trabalho</span><span class="timeline__date">2022 — 2023</span></div>
+ <h3 class="timeline__title">Seu cargo anterior</h3>
+ <p class="timeline__org">Nome da Empresa</p>
+ <p class="timeline__desc">Apresente as atividades desenvolvidas, suas contribuições para a equipe e as melhorias realizadas.</p>
+ <div class="timeline__tags"><span>Organização</span><span>Comunicação</span><span>Melhoria contínua</span></div>
+ </div>
+ </li>
+ <li class="timeline__item reveal reveal--left">
+ <div class="timeline__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+ <div class="timeline__card">
+ <div class="timeline__header"><span class="timeline__type">Estágio</span><span class="timeline__date">2021 — 2022</span></div>
+ <h3 class="timeline__title">Estágio na sua área</h3>
+ <p class="timeline__org">Nome da Empresa</p>
+ <p class="timeline__desc">Conte como apoiou a equipe, quais atividades realizou e o que aprendeu nessa experiência.</p>
+ <div class="timeline__tags"><span>Aprendizado</span><span>Trabalho em equipe</span><span>Apoio operacional</span></div>
+ </div>
+ </li>
+ <li class="timeline__item reveal reveal--right">
+ <div class="timeline__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5-10-5Z"/><path d="M6 11v6c4 3 8 3 12 0v-6M22 9v6"/></svg></div>
+ <div class="timeline__card">
+ <div class="timeline__header"><span class="timeline__type">Formação</span><span class="timeline__date">2018 — 2022</span></div>
+ <h3 class="timeline__title">Nome do Curso</h3>
+ <p class="timeline__org">Nome da Instituição</p>
+ <p class="timeline__desc">Apresente sua formação, os conhecimentos adquiridos e os projetos acadêmicos mais relevantes.</p>
+ <div class="timeline__tags"><span>Formação acadêmica</span><span>Pesquisa</span><span>Projetos</span></div>
+ </div>
+ </li>
+ </ol>
+ </div>
+ </section>
+
+ <!-- ========== HABILIDADES ========== -->
+ <section id="stack" class="section stack">
+ <div class="container">
+ <h2 class="section__title reveal">
+ <span class="highlight">Habilidades</span>
+ </h2>
+ <p class="section__subtitle reveal">Competencias e ferramentas que domino</p>
+
+ <div class="competencias reveal" aria-labelledby="competencias-title">
+ <h3 id="competencias-title" class="competencias__title">Competências principais</h3>
+ <p class="competencias__intro">Habilidades que orientam minha atuação profissional.</p>
+ <ul class="competencias__grid">
+ <li class="competencias__item"><h4>Comunicação</h4><p>Apresentar ideias com clareza e adaptar a linguagem a diferentes públicos.</p></li>
+ <li class="competencias__item"><h4>Organização e planejamento</h4><p>Definir prioridades, acompanhar prazos e estruturar as atividades do dia a dia.</p></li>
+ <li class="competencias__item"><h4>Gestão de projetos</h4><p>Coordenar etapas, recursos e entregas com foco nos objetivos de cada projeto.</p></li>
+ <li class="competencias__item"><h4>Análise de dados</h4><p>Interpretar informações e indicadores para apoiar decisões e melhorias.</p></li>
+ <li class="competencias__item"><h4>Trabalho em equipe</h4><p>Colaborar com diferentes pessoas e contribuir para entregas compartilhadas.</p></li>
+ <li class="competencias__item"><h4>Negociação</h4><p>Ouvir necessidades, alinhar expectativas e construir acordos.</p></li>
+ </ul>
+ </div>
+
+ <div class="stack__categories">
+ <!-- Comunicacao -->
+ <div class="stack__category reveal">
+ <h3 class="stack__category-title">
+ <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+ Comunicacao
+ </h3>
+ <div class="stack__items">
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+ <span>Oratoria</span>
+ </div>
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></div>
+ <span>Redacao</span>
+ </div>
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+ <span>Apresentacao</span>
+ </div>
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+ <span>Negociacao</span>
+ </div>
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+ <span>Midias Sociais</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- Tecnica -->
+ <div class="stack__category reveal">
+ <h3 class="stack__category-title">
+ <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+ Tecnica
+ </h3>
+ <div class="stack__items">
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+ <span>Pacote Office</span>
+ </div>
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.8-.1 2.6-.3l-1.1-1.9C8.5 19.2 5 16 5 12c0-3.5 2.5-6.5 6-7.5L12 2z"/><path d="M22 12c0-2.5-1-4.8-2.5-6.5L18 7l-2 1.5"/><path d="M16 22l-2-3.5 3-1.5"/></svg></div>
+ <span>Canva</span>
+ </div>
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+ <span>Google Analytics</span>
+ </div>
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12c0 1.2-4 6-9 6s-9-4.8-9-6c0-1.2 4-6 9-6s9 4.8 9 6z"/><circle cx="12" cy="12" r="3"/><path d="M3 12h2"/><path d="M19 12h2"/><path d="M12 3v2"/><path d="M12 19v2"/></svg></div>
+ <span>Power BI</span>
+ </div>
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+ <span>CRM</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- Gestao -->
+ <div class="stack__category reveal">
+ <h3 class="stack__category-title">
+ <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+ Gestao
+ </h3>
+ <div class="stack__items">
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+ <span>Lideranca</span>
+ </div>
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"/><path d="M20.49 15a9 9 0 0 1-14.85 3.36L1 14"/></svg></div>
+ <span>Metodologias Ageis</span>
+ </div>
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
+ <span>Gestao de Projetos</span>
+ </div>
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+ <span>Planejamento Estrategico</span>
+ </div>
+ </div>
+ </div>
+
+ <!-- Idiomas -->
+ <div class="stack__category reveal">
+ <h3 class="stack__category-title">
+ <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--clr-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+ Idiomas
+ </h3>
+ <div class="stack__items">
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+ <span>Portugues Nativo</span>
+ </div>
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l6 6"/><path d="M4 14l6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="M22 22l-5-10-5 10"/><path d="M14 18h6"/></svg></div>
+ <span>Ingles Fluente</span>
+ </div>
+ <div class="stack__item">
+ <div class="stack__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--clr-text-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l6 6"/><path d="M4 14l6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="M22 22l-5-10-5 10"/><path d="M14 18h6"/></svg></div>
+ <span>Espanhol Intermediario</span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== FORMACAO ========== -->
+ <section id="certificados" class="section certificados">
+ <div class="container">
+ <h2 class="section__title reveal">
+ <span class="highlight">Formacao</span>
+ </h2>
+ <p class="section__subtitle reveal">Minhas qualificacoes e cursos concluidos</p>
+
+ <div class="certificados__grid">
+ <!-- Formacao 1 -->
+ <div class="certificado-card reveal">
+ <div class="certificado-card__badge">
+ <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+ </div>
+ <div class="certificado-card__content">
+ <h3 class="certificado-card__title">MBA em Gestao Empresarial</h3>
+ <p class="certificado-card__issuer">Instituicao de Ensino</p>
+ <span class="certificado-card__date">2024</span>
+ </div>
+ <a href="#" class="certificado-card__link" target="_blank" aria-label="Ver certificado">
+ <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+
+ <!-- Formacao 2 -->
+ <div class="certificado-card reveal">
+ <div class="certificado-card__badge">
+ <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+ </div>
+ <div class="certificado-card__content">
+ <h3 class="certificado-card__title">Curso de Lideranca</h3>
+ <p class="certificado-card__issuer">Escola de Formacao</p>
+ <span class="certificado-card__date">2024</span>
+ </div>
+ <a href="#" class="certificado-card__link" target="_blank" aria-label="Ver certificado">
+ <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+
+ <!-- Formacao 3 -->
+ <div class="certificado-card reveal">
+ <div class="certificado-card__badge">
+ <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+ </div>
+ <div class="certificado-card__content">
+ <h3 class="certificado-card__title">Certificacao em Marketing Digital</h3>
+ <p class="certificado-card__issuer">Plataforma de Cursos</p>
+ <span class="certificado-card__date">2023</span>
+ </div>
+ <a href="#" class="certificado-card__link" target="_blank" aria-label="Ver certificado">
+ <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+
+ <!-- Formacao 4 -->
+ <div class="certificado-card reveal">
+ <div class="certificado-card__badge">
+ <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+ </div>
+ <div class="certificado-card__content">
+ <h3 class="certificado-card__title">Curso de Oratoria</h3>
+ <p class="certificado-card__issuer">Centro de Comunicacao</p>
+ <span class="certificado-card__date">2023</span>
+ </div>
+ <a href="#" class="certificado-card__link" target="_blank" aria-label="Ver certificado">
+ <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+
+ <!-- Formacao 5 -->
+ <div class="certificado-card reveal">
+ <div class="certificado-card__badge">
+ <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+ </div>
+ <div class="certificado-card__content">
+ <h3 class="certificado-card__title">Especializacao em Finance</h3>
+ <p class="certificado-card__issuer">Universidade Corporativa</p>
+ <span class="certificado-card__date">2022</span>
+ </div>
+ <a href="#" class="certificado-card__link" target="_blank" aria-label="Ver certificado">
+ <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+
+ <!-- Formacao 6 -->
+ <div class="certificado-card reveal">
+ <div class="certificado-card__badge">
+ <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+ </div>
+ <div class="certificado-card__content">
+ <h3 class="certificado-card__title">Curso de Design Thinking</h3>
+ <p class="certificado-card__issuer">Escola de Inovacao</p>
+ <span class="certificado-card__date">2022</span>
+ </div>
+ <a href="#" class="certificado-card__link" target="_blank" aria-label="Ver certificado">
+ <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ========== CONTATO ========== -->
+ <section id="contato" class="section contato">
+ <div class="container">
+ <h2 class="section__title reveal">
+ Entre em <span class="highlight">Contato</span>
+ </h2>
+ <p class="section__subtitle reveal">Vamos conversar? Estou disponivel para novas oportunidades</p>
+
+ <!-- Personalize a área desejada e a modalidade de trabalho conforme seu objetivo. -->
+ <aside class="disponibilidade reveal" aria-labelledby="disponibilidade-title">
+ <h3 id="disponibilidade-title" class="disponibilidade__title">Disponibilidade</h3>
+ <p>Disponível para conversar sobre novas oportunidades profissionais.</p>
+ <dl class="disponibilidade__details">
+ <div><dt>Oportunidades</dt><dd>Aberto a vagas, projetos e parcerias em diferentes áreas de atuação.</dd></div>
+ <div><dt>Modalidade de trabalho</dt><dd>Remoto, híbrido ou presencial, conforme a oportunidade.</dd></div>
+ </dl>
+ </aside>
+
+ <div class="contato__grid">
+ <!-- Info de contato -->
+ <div class="contato__info reveal">
+ <div class="contato__card">
+ <!-- Email -->
+ <a href="mailto:seuemail@gmail.com" class="contato__item">
+ <div class="contato__icon">
+ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+ </div>
+ <div>
+ <h4>Email</h4>
+ <p>seuemail@gmail.com</p>
+ </div>
+ </a>
+
+ <!-- WhatsApp -->
+ <a href="https://wa.me/5500000000000" class="contato__item" target="_blank">
+ <div class="contato__icon contato__icon--whatsapp">
+ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+ </div>
+ <div>
+ <h4>WhatsApp</h4>
+ <p>(00) 00000-0000</p>
+ </div>
+ </a>
+
+ <!-- LinkedIn -->
+ <a href="#" class="contato__item" target="_blank">
+ <div class="contato__icon contato__icon--linkedin">
+ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </div>
+ <div>
+ <h4>LinkedIn</h4>
+ <p>linkedin.com/in/seunome</p>
+ </div>
+ </a>
+
+ <!-- Portfolio Online -->
+ <a href="#" class="contato__item" target="_blank">
+ <div class="contato__icon contato__icon--github">
+ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+ </div>
+ <div>
+ <h4>Portfolio Online</h4>
+ <p>seunome.com</p>
+ </div>
+ </a>
+ </div>
+
+ <!-- Download CV -->
+ <div class="contato__cv">
+ <a href="assets/resume/curriculo.pdf" download class="btn btn--primary btn--full btn--download">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+ Baixar Curriculo (PDF)
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ </main>
+
+ <!-- ========== FOOTER ========== -->
+ <footer class="footer">
+ <div class="container footer__container">
+ <p class="footer__text">
+ SeuNome<span class="logo-dot">.</span>
+ &mdash; Feito com dedicacao
+ </p>
+ <p class="footer__copy">&copy; 2026 Todos os direitos reservados</p>
+ </div>
+ </footer>
+
+ <!-- Back to top -->
+ <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+ </button>
+
+ <script src="script.js"></script>
+</body>
+</html>
